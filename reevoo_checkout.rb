@@ -45,7 +45,7 @@ module Reevoo
 
     def fruit_tea_price
       sample_fruit = items.first{|el| :fr1 == el.name }
-      sample_fruit.price or 0.0
+      sample_fruit and sample_fruit.price or 0.0
     end
   end
 
